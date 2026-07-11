@@ -922,6 +922,7 @@ button.danger {
   .topbar,
   .hero,
   .dashboard,
+  {
   .footer-scene {
     display: flex;
     flex-direction: column;
