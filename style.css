@@ -947,8 +947,7 @@ button.danger {
     display: block;
   }
   .top-quote {
-    text-align: left;
-    margin: 18px 0 0;
+    display: none;
   }
   .company-cards,
   .search-output,
@@ -959,5 +958,9 @@ button.danger {
   }
   .giraffe_head {
     display: none;
+  }
+  .celery {
+    justify-content: right;
+    opacity: .55
   }
 }
