@@ -1,4 +1,4 @@
-WayFinder
+WayFinder - Small post-grad tool I made for my son graduating soon.
 
 Files:
 - index.html = page structure and text
