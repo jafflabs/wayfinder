@@ -906,41 +906,49 @@ button.danger {
   .sidebar {
     display: none;
   }
-
   .mascot,
   .sidebar-quote {
     display: none;
   }
-
   .nav {
     display: none;
   }
-
   .nav-link {
     dispay: none;
   }
-  
-  .app-shell {
+    .app-shell {
     margin-left: 0;
   }
-
   .topbar,
   .hero,
   .dashboard,
   .footer-scene {
-    padding-left: 18px;
-    padding-right: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 18px 18px;
+    text-align: center;
   }
-
+  .giraffe-pair {
+    position: relative;
+    width: 240px;
+    max-width: 100%;
+    height: 86px;
+    margin: 0 auto;
+  }
+  .button-row {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
   .topbar {
     display: block;
   }
-
   .top-quote {
     text-align: left;
     margin: 18px 0 0;
   }
-
   .company-cards,
   .search-output,
   .job-grid,
@@ -948,7 +956,6 @@ button.danger {
   .select-grid {
     grid-template-columns: 1fr;
   }
-
   .giraffe_head {
     display: none;
   }
