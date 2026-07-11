@@ -83,23 +83,18 @@ body::before {
   inset: 0 auto 0 0;
   width: 200px;
   height: 100vh;
-
   background:
     linear-gradient(rgba(77, 67, 59, .96), rgba(77, 67, 59, .97)),
     radial-gradient(circle at 40% 30%, rgba(181, 148, 90, .12) 0 12%, transparent 13%),
     radial-gradient(circle at 70% 40%, rgba(181, 148, 90, .10) 0 10%, transparent 11%);
-
   color: #faf8f3;
   padding: 0 0 24px;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
   box-shadow: 14px 0 40px rgba(30, 30, 30, .14);
   z-index: 10;
 }
-
 .mascot {
   height: 170px;
   flex: 0 0 170px;
@@ -107,7 +102,6 @@ body::before {
   border-bottom: 1px solid rgba(255, 247, 234, 0.08);
   overflow: hidden;
 }
-
 .giraffe-small {
   position: absolute;
   width: 170px;
@@ -119,14 +113,12 @@ body::before {
   filter: drop-shadow(0 7px 10px rgba(0,0,0,.28));
   opacity: 0.85;
 }
-
 .nav {
   display: grid;
   gap: 4px;
   padding: 14px 0 0;
   margin: 0;
 }
-
 .nav-link {
   display: block;
   width: 100%;
@@ -141,14 +133,14 @@ body::before {
   border-left: 4px solid transparent;
   cursor: default;
 }
-
+/* Removing for now, static buttons
 .nav a:hover,
 .nav a.active {
   background: rgba(255, 247, 234, 0.08);
   border-left-color: var(--gold-2);
   color: #ffd265;
 }
-
+*/
 .sidebar-quote {
   margin-top: auto;
   text-align: center;
@@ -924,6 +916,10 @@ button.danger {
     display: none;
   }
 
+  .nav-link {
+    dispay: none;
+  }
+  
   .app-shell {
     margin-left: 0;
   }
