@@ -917,6 +917,8 @@ button.danger {
   .banner_logo {
     width: min(300px, 75%);
     top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .celery,
