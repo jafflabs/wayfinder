@@ -916,8 +916,12 @@ button.danger {
   .nav-link {
     dispay: none;
   }
-    .app-shell {
+  .app-shell {
     margin-left: 0;
+  }
+  .banner_logo {
+    width: min(300px, 75%);
+    top: 10px;
   }
   .topbar,
   .hero,
@@ -960,7 +964,6 @@ button.danger {
     display: none;
   }
   .celery {
-    justify-content: right;
-    opacity: .55
+    display: none;
   }
 }
