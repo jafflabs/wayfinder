@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WayFinder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="mascot">
+      <img src="images/giraffe-small.png" class="giraffe-small" alt="WayFinder giraffe mascot">
+    </div>
+
+    <nav class="nav">
+      <button class="nav-link" type="button">⌂ Home</button>
+      <button class="nav-link" type="button">⌕ Explore</button>
+      <button class="nav-link" type="button">▱ Research Shelf</button>
+      <button class="nav-link" type="button">☷ Thinking Space</button>
+      <button class="nav-link" type="button">◒ Programs</button>
+      <button class="nav-link" type="button">∞ Resources</button>
+    </nav>
+
+    <div class="sidebar-quote">
+      <p>Aim high.</p>
+      <p>Stay curious.</p>
+    </div>
+  </aside>
+
+  <main class="app-shell">
+    <img src="images/giraffe_neck.png" class="giraffe_head" alt="">  
+    <header id="home" class="topbar">
+      <img src="images/Banner_Logo_t.png" class="banner_logo" alt="WayFinder logo">
+	  <img src="images/celery1.png" class="celery" alt="Celery">
+      <div class="top-quote">
+	    <p>"Seek your celeries..."</p>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <h2>Welcome to WayFinder</h2>
+        <p>
+          A place to explore possibilities, collect clues, and choose the next small step after graduation.
+        </p>
+    </section>
+
+    <div class="dashboard">
+      <div class="left-column">
+        <section id="explore" class="panel search-panel">
+          <div class="panel-heading">
+            <span class="icon">⌕</span>
+            <div>
+              <h3>Start Your Search</h3>
+              <p>Choose a location and a job family to find ideas and opportunities.</p>
+            </div>
+          </div>
+
+          <div class="select-grid">
+            <label>
+              <span>Location</span>
+              <select id="locationSelect"></select>
+            </label>
+
+            <label>
+              <span>Job Family / Interest</span>
+              <select id="familySelect"></select>
+            </label>
+          </div>
+
+          <div id="searchOutput" class="search-output"></div>
+          <p class="tip">Tip: Try different combinations. Save anything that seems even slightly interesting.</p>
+        </section>
+
+        <section id="familiesPanel" class="panel">
+          <div class="panel-heading">
+            <span class="icon">✤</span>
+            <h3>Explore by Job Family</h3>
+          </div>
+          <p>This will change your Job Family / Interest above.</p>
+          <div id="families" class="job-grid"></div>
+        </section>
+
+        <section id="resources" class="panel starter-titles">
+          <div class="panel-heading">
+            <span class="icon">☑</span>
+            <h3>Explore by Starter Job Title</h3>
+          </div>
+          <p>Click a title to open a broad Google search for entry-level Michigan roles.</p>
+          <div id="titleList" class="title-list"></div>
+        </section>
+
+        <section id="companies" class="panel companies-panel">
+          <div class="panel-heading">
+            <span class="icon">⌘</span>
+            <h3>Explore Example Companies</h3>
+          </div>
+          <p>These are not recommendations or final answers. They are examples of organizations and industries worth exploring around Michigan.</p>
+		  <p>Explore their sites and others, look for benefits offered, also education assistance programs.</p>
+          <div id="companyCards" class="company-cards"></div>
+        </section>
+       
+      </div>
+
+      <div class="right-column">
+        <div class="right-art-space" aria-hidden="true">
+          <span class="right-giraffe-placeholder"></span>
+        </div>
+
+        <section id="discover" class="panel">
+          <div class="panel-heading">
+            <span class="icon">◇</span>
+            <h3>Discover</h3>
+          </div>
+          <p>Generate a random search combination when the blank page feeling hits.</p>
+          <button id="discoverBtn" type="button">Give me a direction</button>
+          <div id="discoverOutput" class="discover-output"></div>
+        </section>
+        <!-- Removed for now, but may be added back in later.
+        <section id="notes" class="panel quick-notes">
+          <div class="panel-heading">
+            <span class="icon">☷</span>
+            <h3>Thinking Space</h3>
+          </div>
+          <textarea id="notesText" placeholder="Example: Systems Engineering seems interesting. Need to compare cost, location, skills, and first-job options."></textarea>
+          <button id="saveNotes">Save Note</button>
+        </section>      -->
+        <section id="links" class="panel saved-links">
+          <div class="panel-heading">
+            <span class="icon">▱</span>
+            <h3>Research Shelf</h3>
+          </div>
+          <p>Save links that interest you. This becomes the simple “saved items” shelf.</p>
+          <form id="linkForm" class="link-form">
+            <select id="linkType" aria-label="Saved item type">
+              <option value="Job">Job</option>
+              <option value="School">School</option>
+              <option value="Company">Company</option>
+              <option value="Article">Article</option>
+              <option value="Other">Other</option>
+            </select>
+            <input id="linkTitle" placeholder="Labels like: Job, Title, Company, Program, Idea, Interest" required />
+            <input id="linkUrl" placeholder="URL" required />
+            <input id="linkTags" placeholder="Short notes, or reminders" />
+            <button type="submit">Save Item</button>
+          </form>
+          <div id="savedLinks" class="saved-list"></div>
+        </section>
+
+        <section id="tasksPanel" class="panel">
+          <div class="panel-heading">
+            <span class="icon">☆</span>
+            <h3>Next Step Builder & Ideas</h3>
+            <p>Delete, add, or check off tasks as you complete them.</p>
+          </div>
+          <div id="taskList" class="task-list"></div>
+          <div class="task-add">
+            <input id="newTaskInput" type="text" placeholder="Add a next step..." />
+            <button id="addTaskBtn" type="button">Add</button>
+          </div>
+          <p class="tip">These save in this browser only for now. This set is just an example.</p>
+        </section>
+
+		<section id="programs" class="panel programs-panel">
+          <div class="panel-heading">
+            <span class="icon">◒</span>
+            <h3>Possible Next Education Steps</h3>
+          </div>
+          <p>
+            Graduate school is not the default answer. It is one possible bridge from a broad science degree into applied directions such as systems, aerospace, data, operations, or engineering. 
+            There are also certification paths that lead into graduate programs, or enhance skills and add a layer of recognition to your resume.
+          </p> 
+          <p>Use interests here, to connect to the starting job idea to leverage employee education assistance programs.</p>
+		  <p>The first step, is finding and saving a few options that interest you.</p> 
+
+          <div class="program-benchmark">
+            <strong>Search lens:</strong>
+            affordable + reputable + flexible + connected to real jobs.
+          </div>
+
+          <div id="programCards" class="program-cards"></div>
+
+          <details class="program-details">
+            <summary>More program search ideas</summary>
+            <div id="programSearches" class="mini-links"></div>
+          </details>
+        </section>
+	  </div>
+    </div>
+
+    <section class="footer-scene">
+      <div class="giraffe-pair" aria-hidden="true">
+        <span class="big-giraffe">🦒</span>
+        <span class="young-giraffe">🦒</span>
+      </div>
+      <p>The path is seldom straight, but the key is to keep walking.</p>
+      <div class="button-row">
+        <button id="exportTxt" class="secondary">Export TXT</button>
+        <button id="exportCsv" class="secondary">Export CSV</button>
+        <button id="exportData" class="secondary">Export JSON</button>
+        <button id="clearData" class="danger">Reset Workspace</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
