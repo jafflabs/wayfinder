@@ -365,6 +365,14 @@ button {
   font: inherit;
 }
 
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--gold-2);
+    box-shadow: 0 0 0 3px rgba(184, 115, 8, 0.15);
+}
+
 select,
 input,
 textarea {
@@ -528,13 +536,15 @@ button.danger {
   line-height: 1.35;
 }
 
-.company-card a {
-  color: var(--brown-2);
-  font-weight: 800;
+.company-card a,
+.mini-links a {
+  color: #794008;
+  font-weight: 900;
   text-decoration: none;
 }
 
-.company-card a:hover {
+.company-card a:hover,
+.mini-links a:hover {
   text-decoration: underline;
 }
 
@@ -647,8 +657,8 @@ button.danger {
 
 .program-actions a,
 .mini-links a {
-  color: var(--brown-2);
-  font-weight: 700;
+  color: #794008;
+  font-weight: 900;
   text-decoration: none;
 }
 
@@ -699,6 +709,18 @@ button.danger {
   font-weight: 700;
 }
 
+.google-search-container {
+  margin-top: 18px;
+}
+
+.google-search-container form {
+  display: flex;
+  gap: 8px;
+}
+
+.google-search-input {
+  flex; 1;
+}
 /*--------------------------------------------------------
 15. Task List
 --------------------------------------------------------*/
