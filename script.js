@@ -86,7 +86,7 @@ const starterTitles = [
   "Technical Support Analyst", "Instrumentation Technician", "Validation Technician",
   "Aerospace Technician", "STEM Tutor", "Applications Specialist", "Process Improvement Analyst"
 ];
-
+/*
 const popularSearches = [
   "entry level systems analyst brighton mi",
   "junior data analyst remote",
@@ -97,7 +97,7 @@ const popularSearches = [
   "lab technician jobs",
   "operations analyst entry level"
 ];
-
+*/
 const companies = [
   { name: "Stryker", location: "Kalamazoo / Portage", focus: "Medical technology, engineering, quality, manufacturing", search: "Stryker careers Kalamazoo entry level engineering analyst" },
   { name: "Pfizer", location: "Kalamazoo", focus: "Pharmaceutical manufacturing, lab, quality, validation", search: "Pfizer Kalamazoo careers lab technician quality validation" },
@@ -125,7 +125,7 @@ const programCards = [
   {
     school: "Georgia Tech Online",
     program: "14 Online MS Programs, also Certicates - Explore",
-    note: "Strong benchmark for affordable, flexible, reputable online graduate study for technical STEM.",
+    note: "Strong benchmark for <b>affordable, flexible, reputable</b> online graduate study for technical STEM.",
     url: "https://pe.gatech.edu/degrees#tab-master-of-science-degrees",
     search: "Georgia Tech online tuition"
   },
@@ -137,20 +137,19 @@ const programCards = [
     search: "UCF online MS systems engineering tuition"
   },
   {
-    school: "Michigan Tech",
-    program: "Online Applied Science / Engineering Options",
-    note: "A Michigan-based option to compare for reputation, cost, prerequisites, and technical fit.",
-    url: "https://www.mtu.edu/online/",
-    search: "Michigan Tech online graduate engineering applied science"
+  school: "Michigan Teaching Pathways",
+  program: "Secondary Science & Physics Teaching",
+  note: "If teaching becomes your direction, first explore Michigan's certification pathways. Compare alternative certification, MAT programs, and online graduate options before choosing a university.",
+  url: "https://www.michigan.gov/mde/services/ed-serv/educator-recruitment/new-michigan-teachers/becoming-a-michigan-teacher",
+  search: "Michigan online MAT secondary science physics teacher certification"
   }
 ];
 
 const defaultTasks = [
   { text: "Research applied science paths", done: false },
-  { text: "Build Python / Excel confidence", done: false },
+  { text: "Research Michigan teaching paths", done: false},
   { text: "Update resume", done: false },
-  { text: "Save 5 interesting job postings", done: false },
-  { text: "Ask one person about their work", done: false }
+  { text: "Save 5 interesting job postings, note benefits, timing, and ed-assist", done: false },
 ];
 
 let selectedLocation = localStorage.getItem("wf_location") || localStorage.getItem("lp_location") || "Brighton";
