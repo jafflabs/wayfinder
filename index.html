@@ -13,6 +13,7 @@
     </div>
 
     <nav class="nav">
+	<p>Site List</p> 
       <button class="nav-link" type="button">⌂ Home</button>
       <button class="nav-link" type="button">⌕ Explore</button>
       <button class="nav-link" type="button">▱ Research Shelf</button>
@@ -51,7 +52,7 @@
           <div class="panel-heading">
             <span class="icon">⌕</span>
             <div>
-              <h3>Start Your Search</h3>
+              <h3>Starting Search-inator</h3>
               <p>Choose a location and a job family to find ideas and opportunities.</p>
             </div>
           </div>
@@ -95,8 +96,8 @@
             <span class="icon">⌘</span>
             <h3>Explore Example Companies</h3>
           </div>
-          <p>These are not recommendations or final answers. They are examples of organizations and industries worth exploring around Michigan.</p>
-		  <p>Explore their sites and others, look for benefits offered, also education assistance programs.</p>
+          <p>Some examples of organizations and industries worth exploring around Michigan.</p>
+		  <p>Explore their sites and others, look for benefits offered, also mentions of education assistance programs.</p>
           <div id="companyCards" class="company-cards"></div>
         </section>
        
@@ -112,9 +113,15 @@
             <span class="icon">◇</span>
             <h3>Discover</h3>
           </div>
-          <p>Generate a random search combination when the blank page feeling hits.</p>
-          <button id="discoverBtn" type="button">Give me a direction</button>
+          <p>Generate a random search combination if you're not sure where to start.</p>
+          <button id="discoverBtn" type="button">Randomizer</button>
           <div id="discoverOutput" class="discover-output"></div>
+		  <div class="google-search-container">
+			<form action="https://google.com/search" method="get" target="_blank">
+			 <input type="text" name="q" placeholder="Or search on Google..." class="google-search-input" required>
+			 <button type="search" class="google-search-btn">Explore</button>
+			</form>
+		  </div>
         </section>
         <!-- Removed for now, but may be added back in later.
         <section id="notes" class="panel quick-notes">
@@ -167,10 +174,10 @@
             <h3>Possible Next Education Steps</h3>
           </div>
           <p>
-            Graduate school is not the default answer. It is one possible bridge from a broad science degree into applied directions such as systems, aerospace, data, operations, or engineering. 
-            There are also certification paths that lead into graduate programs, or enhance skills and add a layer of recognition to your resume.
+            Graduate school is not the default answer but just one possible bridge from a broad science degree into applied directions such as systems, aerospace, data, operations, or engineering. 
+            If a whole program seems like too much look at their graduate certificate paths as bite sized credentials that usually apply credit toward the greater program if you choose to pursue it later.
           </p> 
-          <p>Use interests here, to connect to the starting job idea to leverage employee education assistance programs.</p>
+          <p>Keep any in mind while looking at starting job ideas. Education assistance programs are awesome!</p>
 		  <p>The first step, is finding and saving a few options that interest you.</p> 
 
           <div class="program-benchmark">
